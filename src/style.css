@@ -1687,7 +1687,7 @@ h6,
 }
 
 .terminal-line.error {
-  color: #f87171;
+  color: var(--primary-red);
 }
 
 .terminal-line.ai-msg {
