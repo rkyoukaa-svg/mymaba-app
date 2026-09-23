@@ -207,7 +207,7 @@ export function initLoginModalEvents(onLoginSuccess, onClose) {
           feedbackAlert.className = 'login-alert login-alert-error shake-animation';
           feedbackAlert.style.display = 'block';
           feedbackAlert.innerHTML = `
-            <div style="display:flex; align-items:flex-start; gap:0.75rem; background:rgba(239, 68, 68, 0.12); border:1.5px solid #ef4444; color:#b91c1c; padding:0.9rem 1rem; border-radius:var(--radius-md); font-size:0.88rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.75rem; background:var(--primary-red-soft); border:1.5px solid var(--primary-red); color:var(--primary-red-dark); padding:0.9rem 1rem; border-radius:var(--radius-md); font-size:0.88rem;">
               <i data-lucide="alert-triangle" style="width:20px; height:20px; flex-shrink:0; margin-top:2px;"></i>
               <div>
                 <strong style="display:block; font-size:0.95rem;">Login Tidak Berhasil!</strong>
@@ -219,8 +219,8 @@ export function initLoginModalEvents(onLoginSuccess, onClose) {
         }
 
         // Highlight input fields with red error ring
-        if (emailInput) emailInput.style.borderColor = '#ef4444';
-        if (passwordInput) passwordInput.style.borderColor = '#ef4444';
+        if (emailInput) emailInput.style.borderColor = 'var(--primary-red)';
+        if (passwordInput) passwordInput.style.borderColor = 'var(--primary-red)';
       }
     });
   }

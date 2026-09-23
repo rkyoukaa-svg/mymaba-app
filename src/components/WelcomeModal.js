@@ -52,7 +52,7 @@ export function renderWelcomeModal() {
           <!-- 18+ Warning Notice Card -->
           <div class="popup-anim-3 warning-notice-box" style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 0.9rem 1rem; margin-bottom: 1.25rem; text-align: left;">
             <div style="display: flex; align-items: center; gap: 0.5rem; color: #b91c1c; font-weight: 800; font-size: 0.85rem; margin-bottom: 0.35rem;">
-              <i data-lucide="shield-alert" style="width: 18px; height: 18px; color: #ef4444; flex-shrink: 0;"></i>
+              <i data-lucide="shield-alert" style="width: 18px; height: 18px; color: var(--primary-red); flex-shrink: 0;"></i>
               <span>ATURAN KESELAMATAN & LARANGAN BARANG 18+</span>
             </div>
             <p style="font-size: 0.8rem; color: #991b1b; line-height: 1.5; margin: 0;">

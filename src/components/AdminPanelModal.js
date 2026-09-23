@@ -64,7 +64,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
         <!-- Header -->
         <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 1.25rem 1.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.85rem;">
           <div style="display: flex; align-items: center; gap: 0.85rem;">
-            <div style="width: 44px; height: 44px; background: rgba(225, 29, 72, 0.2); border: 1px solid rgba(225, 29, 72, 0.5); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #f43f5e;">
+            <div style="width: 44px; height: 44px; background: var(--primary-red-soft); border: 1px solid var(--primary-red); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary-red);">
               <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
             </div>
             <div>
@@ -76,7 +76,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                 ${isDevUser ? `<span style="background: rgba(59,130,246,0.3); color: #60a5fa; font-size: 0.7rem; font-weight: 800; padding: 0.1rem 0.5rem; border-radius: 4px;">🛠️ Developer Access</span>` : ''}
               </div>
               <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.15rem 0 0 0;">
-                Otoritas: <b style="color: #60a5fa;">${currentUser ? currentUser.name : 'Superadmin'}</b> (<span style="color: #f43f5e; font-weight: 700;">${currentUser ? currentUser.role : 'Superadmin'}</span>)
+                Otoritas: <b style="color: #60a5fa;">${currentUser ? currentUser.name : 'Superadmin'}</b> (<span style="color: var(--primary-red); font-weight: 700;">${currentUser ? currentUser.role : 'Superadmin'}</span>)
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
             <!-- Highlights -->
             <div style="background: #1e293b; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem;">
               <h3 style="font-size: 1rem; font-weight: 800; margin: 0 0 0.85rem 0; color: #ffffff; display: flex; align-items: center; gap: 0.4rem;">
-                <i data-lucide="activity" style="width: 16px; height: 16px; color: #f43f5e;"></i>
+                    <i data-lucide="activity" style="width: 16px; height: 16px; color: var(--primary-red);"></i>
                 <span>Aktivitas Pengguna Terbaru</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem;">
