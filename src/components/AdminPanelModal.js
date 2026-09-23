@@ -134,10 +134,12 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
             <span>Audit Log (${totalLogs})</span>
           </button>
 
-          <button class="admin-tab-btn ${activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'devtools' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'devtools' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
-            <i data-lucide="terminal" style="width: 16px; height: 16px;"></i>
-            <span>Developer Tools</span>
-          </button>
+          ${isDevUser ? `
+            <button class="admin-tab-btn ${activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'devtools' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'devtools' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="terminal" style="width: 16px; height: 16px;"></i>
+              <span>Developer Tools</span>
+            </button>
+          ` : ''}
         </div>
 
         <!-- Main Content Area -->
@@ -419,7 +421,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
             </div>
           ` : ''}
 
-          ${activeTab === 'devtools' ? `
+          ${isDevUser && activeTab === 'devtools' ? `
             <!-- Developer Control Tools in Modal -->
             <div style="display: flex; flex-direction: column; gap: 1.25rem;">
               

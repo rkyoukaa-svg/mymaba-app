@@ -188,7 +188,7 @@ function renderAdminPortal() {
   // =========================================================================
   // CASE 2: USER IS FULLY AUTHENTICATED AS DEVELOPER OR SUPERADMIN
   // =========================================================================
-  if (!isDevUser && adminState.activeTab === 'users') {
+  if (!isDevUser && ['users', 'devtools'].includes(adminState.activeTab)) {
     adminState.activeTab = 'overview';
   }
 
@@ -376,10 +376,13 @@ function renderAdminPortal() {
             <span>Audit Log (${totalLogs})</span>
           </button>
 
-          <button class="nav-item-btn ${adminState.activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'devtools' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'devtools' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
-            <i data-lucide="terminal" style="width: 18px; height: 18px;"></i>
-            <span>Developer Tools</span>
-          </button>
+          ${isDevUser ? `
+            <button class="nav-item-btn ${adminState.activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'devtools' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'devtools' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+              <i data-lucide="terminal" style="width: 18px; height: 18px;"></i>
+              <span>Developer Tools</span>
+              <span style="margin-left:auto; background: rgba(59,130,246,0.3); color: #60a5fa; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 4px;">DEV</span>
+            </button>
+          ` : ''}
         </aside>
 
         <!-- Main Content Area -->
@@ -770,7 +773,7 @@ function renderAdminPortal() {
             </div>
           ` : ''}
 
-          ${adminState.activeTab === 'devtools' ? `
+          ${isDevUser && adminState.activeTab === 'devtools' ? `
             <!-- Comprehensive Developer Control & Maintenance Suite -->
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
               
@@ -1380,6 +1383,10 @@ function renderAdminPortal() {
       executeCLICommand('healthcheck', user);
       renderAdminPortal();
     });
+  }
+
+  if (adminState.activeTab === 'devtools' && cliInput) {
+    cliInput.focus();
   }
 
   // AI Routine Maintenance Trigger Handler
