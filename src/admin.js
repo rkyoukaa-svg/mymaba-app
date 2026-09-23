@@ -450,7 +450,7 @@ function renderAdminPortal() {
                 <div>
                   <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: #ffffff; display: flex; align-items: center; gap: 0.6rem;">
                     <span>Manajemen Otoritas & Penambahan Role</span>
-                    ${isDevUser ? `<span style="background: rgba(34,197,94,0.2); color: #4ade80; border: 1px solid rgba(34,197,94,0.4); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔓 Developer Full Access</span>` : `<span style="background: rgba(239,68,68,0.2); color: #f87171; border: 1px solid rgba(239,68,68,0.4); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔒 Restricted (Read-Only)</span>`}
+                    ${isDevUser ? `<span style="background: rgba(34,197,94,0.2); color: #4ade80; border: 1px solid rgba(34,197,94,0.4); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔓 Developer Full Access</span>` : `<span style="background: var(--primary-red-soft); color: var(--primary-red-dark); border: 1px solid var(--primary-red); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔒 Restricted (Read-Only)</span>`}
                   </h3>
                   <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.25rem 0 0 0;">
                     ${isDevUser ? 'Gunakan otoritas Developer untuk menambah user baru atau mengubah role akun terdaftar.' : '🔒 Penambahan & Perubahan Role hanya dapat diakses oleh Developer (<b>22Kyoukaa@dev.ac.id</b>). Superadmin hanya melihat data secara read-only.'}
@@ -507,7 +507,7 @@ function renderAdminPortal() {
 
               <!-- RESTRICTION ALERT FOR NON-DEVELOPERS -->
               ${!isDevUser ? `
-                <div style="background: rgba(239, 68, 68, 0.1); border: 1.5px solid rgba(239, 68, 68, 0.4); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.85rem; color: #f87171;">
+                <div style="background: var(--primary-red-soft); border: 1.5px solid var(--primary-red); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.85rem; color: var(--primary-red-dark);">
                   <i data-lucide="lock" style="width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px;"></i>
                   <div>
                     <strong style="display: block; font-size: 0.95rem; color: #ffffff;">Fitur Ditahan (Hak Akses Developer)</strong>
@@ -572,7 +572,7 @@ function renderAdminPortal() {
                           `}
                         </td>
                         <td style="padding: 0.85rem 1rem;">
-                          <button class="toggle-user-ban-btn" data-email="${u.email}" style="padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: none; background: ${u.isBanned ? '#ef4444' : 'rgba(34,197,94,0.2)'}; color: ${u.isBanned ? '#ffffff' : '#4ade80'};">
+                          <button class="toggle-user-ban-btn" data-email="${u.email}" style="padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: none; background: ${u.isBanned ? 'var(--primary-red)' : 'rgba(34,197,94,0.2)'}; color: ${u.isBanned ? '#ffffff' : '#4ade80'};">
                             ${u.isBanned ? '🚫 Diblokir' : '🟢 Aktif Normal'}
                           </button>
                         </td>
@@ -724,7 +724,7 @@ function renderAdminPortal() {
                       <div style="font-size: 2rem;">${sess.avatar || '🎓'}</div>
                       <div>
                         <div style="font-weight: 800; font-size: 1rem; color: #ffffff;">${sess.name}</div>
-                        <div style="font-size: 0.8rem; color: #f43f5e;">${sess.email}</div>
+                        <div style="font-size: 0.8rem; color: var(--primary-red);">${sess.email}</div>
                         <div style="font-size: 0.75rem; color: #94a3b8;">${sess.role}</div>
                       </div>
                     </div>
@@ -875,7 +875,7 @@ function renderAdminPortal() {
                 <div class="terminal-header">
                   <div style="display: flex; align-items: center; gap: 0.75rem;">
                     <div class="terminal-dots">
-                      <span class="terminal-dot" style="background: #ef4444;"></span>
+                      <span class="terminal-dot" style="background: var(--primary-red);"></span>
                       <span class="terminal-dot" style="background: #f59e0b;"></span>
                       <span class="terminal-dot" style="background: #10b981;"></span>
                     </div>
@@ -999,7 +999,7 @@ function renderAdminPortal() {
                       <h4 style="margin: 0; font-size: 0.95rem; color: #f87171;">Factory Reset Complete System</h4>
                       <p style="margin: 0.2rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Hapus seluruh data kustom dan kembalikan sistem ke kondisi awal pabrik.</p>
                     </div>
-                    <button id="dev-reset-db-btn" style="background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #f87171; font-size: 0.82rem; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+                    <button id="dev-reset-db-btn" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red-dark); font-size: 0.82rem; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
                       <i data-lucide="flame" style="width: 16px; height: 16px;"></i>
                       <span>Reset Factory Defaults</span>
                     </button>
