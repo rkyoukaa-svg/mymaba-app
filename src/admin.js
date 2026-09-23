@@ -539,7 +539,7 @@ function renderAdminPortal() {
                         </td>
                         <td style="padding: 0.85rem 1rem; color: #60a5fa; font-family: monospace;">${u.email}</td>
                         <td style="padding: 0.85rem 1rem;">
-                          <span style="font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 700; background: ${u.role.includes('Superadmin') ? 'rgba(225,29,72,0.2)' : (u.role.includes('Developer') ? 'rgba(59,130,246,0.2)' : 'rgba(255,255,255,0.08)')}; color: ${u.role.includes('Superadmin') ? '#f43f5e' : (u.role.includes('Developer') ? '#60a5fa' : '#cbd5e1')};">
+                          <span style="font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 700; background: ${u.role.includes('Superadmin') ? 'var(--primary-red-soft)' : (u.role.includes('Developer') ? 'rgba(59,130,246,0.2)' : 'rgba(255,255,255,0.08)')}; color: ${u.role.includes('Superadmin') ? 'var(--primary-red)' : (u.role.includes('Developer') ? '#60a5fa' : '#cbd5e1')};">
                             ${u.role}
                           </span>
                         </td>
@@ -588,7 +588,7 @@ function renderAdminPortal() {
             <!-- SUPERADMIN SYSTEM SETTINGS -->
             <div style="background: #1e293b; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); padding: 1.75rem;">
               <h3 style="font-size: 1.2rem; font-weight: 800; margin: 0 0 0.4rem 0; color: #ffffff; display: flex; align-items: center; gap: 0.5rem;">
-                <i data-lucide="sliders" style="width: 22px; height: 22px; color: #f43f5e;"></i>
+                <i data-lucide="sliders" style="width: 22px; height: 22px; color: var(--primary-red);"></i>
                 Pengaturan Utama & Kontrol Superadmin
               </h3>
               <p style="font-size: 0.84rem; color: #94a3b8; margin: 0 0 1.5rem 0;">Konfigurasi parameter global aplikasi MyMaba, mode pemeliharaan, dan pengumuman siaran.</p>
@@ -600,11 +600,11 @@ function renderAdminPortal() {
                   <div>
                     <h4 style="margin: 0; font-size: 0.98rem; color: #ffffff; display: flex; align-items: center; gap: 0.5rem;">
                       <span>Mode Pemeliharaan Website (Maintenance Mode)</span>
-                      ${settings.maintenanceMode ? `<span style="background: #ef4444; color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 4px;">AKTIF</span>` : `<span style="background: #22c55e; color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 4px;">NONAKTIF</span>`}
+                      ${settings.maintenanceMode ? `<span style="background: var(--primary-red); color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 4px;">AKTIF</span>` : `<span style="background: #22c55e; color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 4px;">NONAKTIF</span>`}
                     </h4>
                     <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Saat aktif, pengguna umum akan melihat spanduk pemeliharaan sistem.</p>
                   </div>
-                  <button id="toggle-maintenance-btn" style="padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.82rem; cursor: pointer; border: none; background: ${settings.maintenanceMode ? '#ef4444' : '#22c55e'}; color: white;">
+                  <button id="toggle-maintenance-btn" style="padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.82rem; cursor: pointer; border: none; background: ${settings.maintenanceMode ? 'var(--primary-red)' : '#22c55e'}; color: white;">
                     ${settings.maintenanceMode ? 'Matikan Maintenance' : 'Nyalakan Maintenance'}
                   </button>
                 </div>
