@@ -60,7 +60,7 @@ export function renderNavbar(onCampusChange, onOpenPartnerModal, onOpenBookmarks
 
           <!-- Admin / Monitoring Panel Trigger (Visible ONLY to Superadmin & Developer) -->
           ${isDevOrAdmin ? `
-            <a href="/admin.html" class="btn-icon" id="admin-panel-trigger-btn" title="Control Panel Superadmin & Developer" style="background: rgba(225, 29, 72, 0.15); color: var(--primary-red); border: 1px solid var(--border-light); position: relative; text-decoration: none;">
+            <a href="/admin.html" class="btn-icon" id="admin-panel-trigger-btn" title="Control Panel Superadmin & Developer" style="background: var(--primary-red-soft); color: var(--primary-red); border: 1px solid var(--border-light); position: relative; text-decoration: none;">
               <i data-lucide="shield-alert" style="width:18px; height:18px;"></i>
               <span style="position: absolute; top: -3px; right: -3px; width: 8px; height: 8px; background: #22c55e; border-radius: 50%;"></span>
             </a>
