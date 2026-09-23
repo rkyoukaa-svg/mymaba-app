@@ -373,7 +373,7 @@ const DEFAULT_SETTINGS = {
   emergencyAlert: {
     active: false,
     title: '🚨 PEMBERITAHUAN DARURAT DEVELOPER',
-    message: 'Terjadi pengujian sistem real-time oleh Developer (lunar@dev.ac.id). Pengguna diimbau menyimpan draf.'
+    message: 'Terjadi pengujian sistem real-time oleh Developer (22Kyoukaa@dev.ac.id). Pengguna diimbau menyimpan draf.'
   },
   featureFlags: {
     enableMarketplace: true,
@@ -439,10 +439,10 @@ export const updateUserDetails = (currentEmail, newName, newEmail, executingUser
       executor ? executor.name : 'Unknown',
       executor ? executor.role : 'Guest',
       'USER_UPDATE_REJECTED',
-      `Gagal mengubah profil ${currentEmail}: Hak akses ditolak (Hanya Developer: lunar@dev.ac.id)`,
+      `Gagal mengubah profil ${currentEmail}: Hak akses ditolak (Hanya Developer: 22Kyoukaa@dev.ac.id)`,
       'warning'
     );
-    return { success: false, message: '❌ Ditolak! Pengubahan nama dan email HANYA BISA DIAKSES OLEH DEVELOPER (lunar@dev.ac.id).' };
+    return { success: false, message: '❌ Ditolak! Pengubahan nama dan email HANYA BISA DIAKSES OLEH DEVELOPER (22Kyoukaa@dev.ac.id).' };
   }
 
   const cleanOld = currentEmail.trim().toLowerCase();
@@ -522,8 +522,8 @@ export const updateUserDetails = (currentEmail, newName, newEmail, executingUser
 export const updateUserRole = (email, newRole, executingUser = null) => {
   const executor = executingUser || getAuthUser();
   if (!executor || !isDeveloper(executor)) {
-    logActivity(executor ? executor.email : 'unknown', executor ? executor.name : 'Unknown', executor ? executor.role : 'Guest', 'ROLE_CHANGE_REJECTED', `Gagal mengubah role ${email}: Hak akses ditolak (Hanya Developer: lunar@dev.ac.id)`, 'warning');
-    return { success: false, message: '❌ Ditolak! Penambahan dan perubahan role HANYA BISA DIAKSES OLEH DEVELOPER (lunar@dev.ac.id).' };
+    logActivity(executor ? executor.email : 'unknown', executor ? executor.name : 'Unknown', executor ? executor.role : 'Guest', 'ROLE_CHANGE_REJECTED', `Gagal mengubah role ${email}: Hak akses ditolak (Hanya Developer: 22Kyoukaa@dev.ac.id)`, 'warning');
+    return { success: false, message: '❌ Ditolak! Penambahan dan perubahan role HANYA BISA DIAKSES OLEH DEVELOPER (22Kyoukaa@dev.ac.id).' };
   }
 
   const cleanEmail = email.trim().toLowerCase();
@@ -550,7 +550,7 @@ export const updateUserRole = (email, newRole, executingUser = null) => {
       setAuthUser({ ...currentUser, role: newRole }, currentUser.rememberMe);
     }
     
-    logActivity(executor.email, executor.name, executor.role, 'ROLE_CHANGE', `Developer (lunar@dev.ac.id) mengubah role ${email} menjadi ${newRole}`, 'success');
+    logActivity(executor.email, executor.name, executor.role, 'ROLE_CHANGE', `Developer (22Kyoukaa@dev.ac.id) mengubah role ${email} menjadi ${newRole}`, 'success');
     return { success: true, target };
   }
   return { success: false, message: 'Pengguna tidak ditemukan.' };
@@ -559,7 +559,7 @@ export const updateUserRole = (email, newRole, executingUser = null) => {
 export const addNewUserRole = (name, email, role, avatar = '👤', executingUser = null) => {
   const executor = executingUser || getAuthUser();
   if (!executor || !isDeveloper(executor)) {
-    return { success: false, message: '❌ Ditolak! Penambahan role baru HANYA BISA DIAKSES OLEH DEVELOPER (lunar@dev.ac.id).' };
+    return { success: false, message: '❌ Ditolak! Penambahan role baru HANYA BISA DIAKSES OLEH DEVELOPER (22Kyoukaa@dev.ac.id).' };
   }
 
   const cleanEmail = email.trim().toLowerCase();
@@ -579,7 +579,7 @@ export const addNewUserRole = (name, email, role, avatar = '👤', executingUser
       customData.push(existing);
     }
     localStorage.setItem(CUSTOM_USERS_KEY, JSON.stringify(customData));
-    logActivity(executor.email, executor.name, executor.role, 'ROLE_ADDITION', `Developer (lunar@dev.ac.id) memperbarui role ${cleanEmail} menjadi ${role}`, 'success');
+    logActivity(executor.email, executor.name, executor.role, 'ROLE_ADDITION', `Developer (22Kyoukaa@dev.ac.id) memperbarui role ${cleanEmail} menjadi ${role}`, 'success');
     return { success: true, user: existing };
   }
 
@@ -595,7 +595,7 @@ export const addNewUserRole = (name, email, role, avatar = '👤', executingUser
   customData.push(newUser);
   localStorage.setItem(CUSTOM_USERS_KEY, JSON.stringify(customData));
 
-  logActivity(executor.email, executor.name, executor.role, 'ROLE_ADDITION', `Developer (lunar@dev.ac.id) menambahkan role baru untuk ${cleanEmail} (${role})`, 'success');
+  logActivity(executor.email, executor.name, executor.role, 'ROLE_ADDITION', `Developer (22Kyoukaa@dev.ac.id) menambahkan role baru untuk ${cleanEmail} (${role})`, 'success');
   return { success: true, user: newUser };
 };
 
@@ -688,7 +688,7 @@ export const resetFullDatabase = () => {
   localStorage.removeItem(BOOKMARKS_KEY);
   const currentUser = getAuthUser();
   logActivity(
-    currentUser ? currentUser.email : 'lunar@dev.ac.id',
+    currentUser ? currentUser.email : '22Kyoukaa@dev.ac.id',
     currentUser ? currentUser.name : 'Developer',
     currentUser ? currentUser.role : 'Developer',
     'DB_RESET',
@@ -723,7 +723,7 @@ export const restoreFullDatabase = (dbDump) => {
 
     const currentUser = getAuthUser();
     logActivity(
-      currentUser ? currentUser.email : 'lunar@dev.ac.id',
+      currentUser ? currentUser.email : '22Kyoukaa@dev.ac.id',
       currentUser ? currentUser.name : 'Developer',
       currentUser ? currentUser.role : 'Developer',
       'DB_RESTORE',
@@ -742,7 +742,7 @@ export const purgeSystemCache = () => {
   localStorage.removeItem(THEME_KEY);
   const currentUser = getAuthUser();
   logActivity(
-    currentUser ? currentUser.email : 'lunar@dev.ac.id',
+    currentUser ? currentUser.email : '22Kyoukaa@dev.ac.id',
     currentUser ? currentUser.name : 'Developer',
     currentUser ? currentUser.role : 'Developer',
     'CACHE_PURGED',
