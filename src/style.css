@@ -2681,3 +2681,40 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Neutral interaction states: no red flash on click or focus. */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:active,
+a:active {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-accent);
+  outline-offset: 3px;
+}
+
+.btn-primary:hover {
+  background: var(--red-gradient);
+  box-shadow: 0 12px 28px -4px rgba(109, 135, 152, 0.28);
+}
+
+.form-control:focus {
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 0 4px var(--gold-light);
+}
+
+.hero-search-box:focus-within {
+  box-shadow: 0 16px 38px rgba(48, 71, 75, 0.12), 0 0 0 2px var(--gold-accent);
+}
