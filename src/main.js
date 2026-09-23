@@ -131,7 +131,7 @@ function renderApp() {
   appContainer.innerHTML = `
     <!-- Global Toast Notification Banner -->
     ${state.toastMessage ? `
-      <div class="toast-notification ${state.toastType === 'error' ? 'toast-error' : 'toast-success'}" style="position:fixed; top:20px; right:20px; z-index:9999; display:flex; align-items:center; gap:0.75rem; background:${state.toastType === 'error' ? '#ef4444' : '#16a34a'}; color:white; padding:0.85rem 1.25rem; border-radius:var(--radius-md); box-shadow:0 10px 25px rgba(0,0,0,0.25); animation: fadeInDown 0.3s ease;">
+      <div class="toast-notification ${state.toastType === 'error' ? 'toast-error' : 'toast-success'}" style="position:fixed; top:20px; right:20px; z-index:9999; display:flex; align-items:center; gap:0.75rem; background:${state.toastType === 'error' ? 'var(--primary-red)' : '#16a34a'}; color:white; padding:0.85rem 1.25rem; border-radius:var(--radius-md); box-shadow:0 10px 25px rgba(0,0,0,0.25); animation: fadeInDown 0.3s ease;">
         <i data-lucide="${state.toastType === 'error' ? 'alert-circle' : 'check-circle'}" style="width:20px; height:20px;"></i>
         <span style="font-weight:600; font-size:0.9rem;">${state.toastMessage}</span>
       </div>
@@ -139,7 +139,7 @@ function renderApp() {
 
     <!-- Developer Emergency Alert Broadcast Banner -->
     ${sysSettings.emergencyAlert && sysSettings.emergencyAlert.active ? `
-      <div style="background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%); color: white; padding: 0.85rem 1.25rem; text-align: center; font-size: 0.92rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.75rem; border-bottom: 2px solid #fde047; box-shadow: 0 4px 15px rgba(220,38,38,0.4); animation: pulse 2s infinite;">
+      <div style="background: var(--red-gradient); color: white; padding: 0.85rem 1.25rem; text-align: center; font-size: 0.92rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.75rem; border-bottom: 2px solid #fde047; box-shadow: 0 4px 15px var(--primary-red-glow); animation: pulse 2s infinite;">
         <i data-lucide="siren" style="width: 22px; height: 22px; color: #fde047; flex-shrink: 0;"></i>
         <div>
           <span style="background: #fde047; color: #7f1d1d; font-size: 0.7rem; font-weight: 900; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.5rem; text-transform: uppercase;">SIARAN DARURAT DEVELOPER</span>
@@ -151,7 +151,7 @@ function renderApp() {
 
     <!-- Superadmin Global Announcement Banner -->
     ${sysSettings.announcementBanner && sysSettings.announcementBanner.active ? `
-      <div style="background: linear-gradient(90deg, #e11d48 0%, #be123c 100%); color: white; padding: 0.6rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
+      <div style="background: var(--red-gradient); color: white; padding: 0.6rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
         <i data-lucide="megaphone" style="width: 16px; height: 16px; flex-shrink: 0;"></i>
         <span>${sysSettings.announcementBanner.text}</span>
       </div>
@@ -159,7 +159,7 @@ function renderApp() {
 
     <!-- Superadmin Maintenance Mode Alert -->
     ${sysSettings.maintenanceMode ? `
-      <div style="background: #ef4444; color: white; padding: 0.75rem 1rem; text-align: center; font-size: 0.88rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+      <div style="background: var(--primary-red); color: white; padding: 0.75rem 1rem; text-align: center; font-size: 0.88rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
         <i data-lucide="alert-triangle" style="width: 18px; height: 18px;"></i>
         <span>MODE PEMELIHARAAN AKTIF — ${sysSettings.maintenanceScheduleText || 'Beberapa fitur dibatasi oleh Pengelola System.'}</span>
       </div>
