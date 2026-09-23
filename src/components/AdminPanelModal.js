@@ -250,7 +250,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                 <div>
                   <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0; color: #ffffff;">Kelola Otoritas User & Role</h3>
                   <p style="font-size: 0.78rem; color: #94a3b8; margin: 0.15rem 0 0 0;">
-                    ${isDevUser ? '🛠️ Hak Akses Developer Aktif (<b>lunar@dev.ac.id</b>) — Penambahan & Perubahan Role Diizinkan.' : '🔒 Penambahan & Perubahan Role hanya dapat diakses oleh Developer (<b>lunar@dev.ac.id</b>).'}
+                    ${isDevUser ? '🛠️ Hak Akses Developer Aktif (<b>22Kyoukaa@dev.ac.id</b>) — Penambahan & Perubahan Role Diizinkan.' : '🔒 Penambahan & Perubahan Role hanya dapat diakses oleh Developer (<b>22Kyoukaa@dev.ac.id</b>).'}
                   </p>
                 </div>
               </div>
@@ -283,7 +283,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                               <option value="Mahasiswa (ITS)" ${u.role.includes('ITS') ? 'selected' : ''}>Mhs ITS</option>
                             </select>
                           ` : `
-                            <div style="font-size: 0.75rem; color: #64748b; display: flex; align-items: center; gap: 0.3rem;" title="Perubahan role dikunci untuk Developer (lunar@dev.ac.id)">
+                            <div style="font-size: 0.75rem; color: #64748b; display: flex; align-items: center; gap: 0.3rem;" title="Perubahan role dikunci untuk Developer (22Kyoukaa@dev.ac.id)">
                               <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
                               <span>Dikunci (Dev Only)</span>
                             </div>

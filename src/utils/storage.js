@@ -91,9 +91,9 @@ export const MOCK_USERS = [
     avatar: '👑'
   },
   {
-    email: 'lunar@dev.ac.id',
-    password: 'DevMaster2026!',
-    name: 'Lunar Lead Developer',
+    email: '22Kyoukaa@dev.ac.id',
+    password: 'thiskyoukaa11',
+    name: '22Kyoukaa Lead Developer',
     role: 'Developer',
     avatar: '🛠️'
   },
@@ -131,7 +131,7 @@ export const isDeveloper = (user) => {
   if (!user || !user.role) return false;
   const roleLower = user.role.toLowerCase();
   const emailLower = (user.email || '').toLowerCase();
-  return roleLower.includes('developer') || emailLower === 'lunar@dev.ac.id';
+  return roleLower.includes('developer') || emailLower === '22kyoukaa@dev.ac.id';
 };
 
 export const getAuthUser = () => {

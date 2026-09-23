@@ -291,7 +291,7 @@ function renderAdminPortal() {
               </span>
               ${isDevUser ? `
                 <span style="background: rgba(59, 130, 246, 0.25); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.5); font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.65rem; border-radius: 50px;">
-                  🛠️ Developer Master (lunar@dev.ac.id)
+                  🛠️ Developer Master (22Kyoukaa@dev.ac.id)
                 </span>
               ` : ''}
             </div>
@@ -453,7 +453,7 @@ function renderAdminPortal() {
                     ${isDevUser ? `<span style="background: rgba(34,197,94,0.2); color: #4ade80; border: 1px solid rgba(34,197,94,0.4); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔓 Developer Full Access</span>` : `<span style="background: rgba(239,68,68,0.2); color: #f87171; border: 1px solid rgba(239,68,68,0.4); font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px;">🔒 Restricted (Read-Only)</span>`}
                   </h3>
                   <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.25rem 0 0 0;">
-                    ${isDevUser ? 'Gunakan otoritas Developer untuk menambah user baru atau mengubah role akun terdaftar.' : '🔒 Penambahan & Perubahan Role hanya dapat diakses oleh Developer (<b>lunar@dev.ac.id</b>). Superadmin hanya melihat data secara read-only.'}
+                    ${isDevUser ? 'Gunakan otoritas Developer untuk menambah user baru atau mengubah role akun terdaftar.' : '🔒 Penambahan & Perubahan Role hanya dapat diakses oleh Developer (<b>22Kyoukaa@dev.ac.id</b>). Superadmin hanya melihat data secara read-only.'}
                   </p>
                 </div>
 
@@ -511,7 +511,7 @@ function renderAdminPortal() {
                   <i data-lucide="lock" style="width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px;"></i>
                   <div>
                     <strong style="display: block; font-size: 0.95rem; color: #ffffff;">Fitur Ditahan (Hak Akses Developer)</strong>
-                    <span style="font-size: 0.84rem;">Penambahan role baru dan pengubahan otoritas user dikunci khusus untuk akun Developer (<b>lunar@dev.ac.id</b>). Anda sedang terhubung sebagai ${user.role}. Gunakan fitur <i>Switch Role</i> di kanan atas untuk berpindah ke akun Developer.</span>
+                    <span style="font-size: 0.84rem;">Penambahan role baru dan pengubahan otoritas user dikunci khusus untuk akun Developer (<b>22Kyoukaa@dev.ac.id</b>). Anda sedang terhubung sebagai ${user.role}. Gunakan fitur <i>Switch Role</i> di kanan atas untuk berpindah ke akun Developer.</span>
                   </div>
                 </div>
               ` : ''}

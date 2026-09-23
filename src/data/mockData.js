@@ -311,7 +311,7 @@ export const MOCK_PLACES = [
     isPopular: false,
     ownerPhone: '6289988776655',
     ownerName: 'Lunar Lead Developer',
-    sellerEmail: 'lunar@dev.ac.id',
+    sellerEmail: '22Kyoukaa@dev.ac.id',
     sellerRole: 'Developer Team',
     sellerAvatar: '🛠️',
     condition: 'Sangat Mulus (No Dead Pixel, Garansi Personal 7 Hari)',
