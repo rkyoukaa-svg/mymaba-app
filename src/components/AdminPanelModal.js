@@ -135,7 +135,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
           </button>
 
           ${isDevUser ? `
-            <button class="admin-tab-btn ${activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'devtools' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'devtools' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+            <button class="admin-tab-btn ${activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'devtools' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'devtools' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
               <i data-lucide="terminal" style="width: 16px; height: 16px;"></i>
               <span>Developer Tools</span>
             </button>
@@ -160,7 +160,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
               <div class="admin-metric-card" style="background: #1e293b; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08); animation-delay: 0.1s;">
                 <div style="font-size: 0.8rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Total Listings</div>
                 <div style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-top: 0.2rem;">${allListings.length}</div>
-                <div style="font-size: 0.75rem; color: #f43f5e; margin-top: 0.2rem;">Kos & Marketplace Items</div>
+                <div style="font-size: 0.75rem; color: var(--primary-red); margin-top: 0.2rem;">Kos & Marketplace Items</div>
               </div>
 
               <div class="admin-metric-card" style="background: #1e293b; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08); animation-delay: 0.15s;">
@@ -233,7 +233,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                       placeholder="Isi pengumuman..."
                       style="flex: 1; padding: 0.55rem 0.75rem; background: #1e293b; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: white; font-size: 0.82rem;"
                     />
-                    <button id="modal-save-announce-btn" style="background: #e11d48; color: white; border: none; padding: 0.55rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                    <button id="modal-save-announce-btn" style="background: var(--red-gradient); color: white; border: none; padding: 0.55rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
                       Simpan
                     </button>
                   </div>
@@ -272,7 +272,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                       <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 0.7rem 0.85rem; font-weight: 700;">${u.avatar || '👤'} ${u.name}</td>
                         <td style="padding: 0.7rem 0.85rem; color: #60a5fa; font-family: monospace;">${u.email}</td>
-                        <td style="padding: 0.7rem 0.85rem; color: #f43f5e; font-weight: 700;">${u.role}</td>
+                        <td style="padding: 0.7rem 0.85rem; color: var(--primary-red); font-weight: 700;">${u.role}</td>
                         <td style="padding: 0.7rem 0.85rem;">
                           ${isDevUser ? `
                             <select class="modal-user-role-select" data-email="${u.email}" style="background: #0f172a; color: white; border: 1px solid rgba(59,130,246,0.4); border-radius: 4px; padding: 0.25rem 0.5rem; font-size: 0.78rem;">
