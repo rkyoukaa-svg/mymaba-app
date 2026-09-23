@@ -2718,3 +2718,48 @@ textarea:focus-visible {
 .hero-search-box:focus-within {
   box-shadow: 0 16px 38px rgba(48, 71, 75, 0.12), 0 0 0 2px var(--gold-accent);
 }
+
+/* Keep legacy inline admin styles on the same calm theme. */
+[style*="#ef4444"],
+[style*="#f87171"],
+[style*="#e11d48"],
+[style*="#be123c"],
+[style*="#f43f5e"],
+[style*="rgba(239,68,68"],
+[style*="rgba(225,29,72"] {
+  border-color: var(--primary-red) !important;
+}
+
+[style*="background: #ef4444"],
+[style*="background:#ef4444"],
+[style*="background: #e11d48"],
+[style*="background:#e11d48"],
+[style*="background: #be123c"],
+[style*="background:#be123c"],
+[style*="background: rgba(239,68,68"],
+[style*="background:rgba(239,68,68"],
+[style*="background: rgba(225,29,72"],
+[style*="background:rgba(225,29,72"] {
+  background: var(--primary-red-soft) !important;
+}
+
+[style*="color: #f87171"],
+[style*="color:#f87171"],
+[style*="color: #f43f5e"],
+[style*="color:#f43f5e"],
+[style*="color: #be123c"],
+[style*="color:#be123c"] {
+  color: var(--primary-red) !important;
+}
+
+@keyframes flamePulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px var(--primary-red-glow));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 8px var(--gold-glow));
+  }
+}
