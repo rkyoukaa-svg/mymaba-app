@@ -3,35 +3,35 @@
   ========================================================================== */
 
 :root {
-  /* Brand Colors - Navy Structure & Coral Actions */
-  --primary-red: #D45151;
-  --primary-red-dark: #A9363F;
-  --primary-red-hover: #E2635D;
-  --primary-red-soft: rgba(212, 81, 81, 0.1);
-  --primary-red-glow: rgba(212, 81, 81, 0.22);
-  --red-gradient: linear-gradient(135deg, #E2635D 0%, #C7474D 100%);
+  /* Brand Colors - Calm Blue, Sage & Champagne */
+  --primary-red: #6D8798;
+  --primary-red-dark: #4D687A;
+  --primary-red-hover: #829EAD;
+  --primary-red-soft: rgba(109, 135, 152, 0.12);
+  --primary-red-glow: rgba(109, 135, 152, 0.2);
+  --red-gradient: linear-gradient(135deg, #829EAD 0%, #607D8D 100%);
 
-  --pearl-white: #F7F8FA;
-  --off-white: #EEF1F5;
+  --pearl-white: #F6F8F7;
+  --off-white: #EDF2F0;
   --pure-white: #FFFFFF;
 
-  --gold-accent: #D99A52;
-  --gold-light: #FFF3E3;
-  --gold-gradient: linear-gradient(135deg, #E7B56F 0%, #D99A52 100%);
-  --gold-glow: rgba(217, 154, 82, 0.28);
+  --gold-accent: #B89B72;
+  --gold-light: #F5EFE6;
+  --gold-gradient: linear-gradient(135deg, #D8C3A2 0%, #B89B72 100%);
+  --gold-glow: rgba(184, 155, 114, 0.24);
 
-  --text-primary: #172334;
-  --text-secondary: #526174;
-  --text-muted: #8390A0;
-  --text-light: #F8FAFC;
+  --text-primary: #25343A;
+  --text-secondary: #607177;
+  --text-muted: #89999B;
+  --text-light: #F7FAF9;
 
-  --border-light: #DCE2EA;
-  --border-gold: rgba(217, 154, 82, 0.4);
+  --border-light: #DCE5E2;
+  --border-gold: rgba(184, 155, 114, 0.4);
 
   --card-bg: #FFFFFF;
-  --card-shadow: 0 10px 30px rgba(28, 46, 70, 0.07);
-  --card-shadow-hover: 0 18px 38px rgba(28, 46, 70, 0.14);
-  --glass-bg: rgba(247, 248, 250, 0.9);
+  --card-shadow: 0 10px 30px rgba(48, 71, 75, 0.07);
+  --card-shadow-hover: 0 18px 38px rgba(48, 71, 75, 0.14);
+  --glass-bg: rgba(246, 248, 247, 0.9);
   --glass-border: rgba(255, 255, 255, 0.8);
 
   /* Modern Typography Stack */
@@ -50,20 +50,20 @@
 
 /* Dark Mode Velvet Theme */
 [data-theme="dark"] {
-  --pearl-white: #111A28;
-  --off-white: #182437;
-  --pure-white: #1D2C40;
+  --pearl-white: #182323;
+  --off-white: #20302F;
+  --pure-white: #273938;
 
-  --text-primary: #F4F7FB;
-  --text-secondary: #C1CCDA;
-  --text-muted: #91A0B3;
+  --text-primary: #F0F5F2;
+  --text-secondary: #C5D2CD;
+  --text-muted: #98AAA4;
 
-  --border-light: rgba(184, 201, 221, 0.18);
-  --card-bg: #1D2C40;
+  --border-light: rgba(197, 214, 207, 0.18);
+  --card-bg: #273938;
   --card-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
   --card-shadow-hover: 0 18px 38px rgba(0, 0, 0, 0.32);
-  --glass-bg: rgba(17, 26, 40, 0.9);
-  --glass-border: rgba(184, 201, 221, 0.16);
+  --glass-bg: rgba(24, 35, 35, 0.9);
+  --glass-border: rgba(197, 214, 207, 0.16);
 }
 
 /* Global Reset & Typography Polish */
@@ -2587,5 +2587,97 @@ body {
 
   .footer {
     padding: 2.75rem 0 1.5rem;
+  }
+}
+
+/* Calm Motion System */
+@keyframes calmReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes calmFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes calmShimmer {
+  from {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+
+  to {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
+.hero-banner > div:first-child {
+  animation: calmReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.wizard-card {
+  animation: calmReveal 0.7s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-tag {
+  animation: calmFloat 5s ease-in-out 0.8s infinite;
+}
+
+.place-card {
+  animation-name: calmReveal;
+  animation-duration: 0.65s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navbar {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 5px 20px rgba(48, 71, 75, 0.06);
+}
+
+.btn-primary::after,
+.btn-gold::after {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.btn-primary:hover::after,
+.btn-gold:hover::after {
+  opacity: 1;
+  animation: calmShimmer 0.9s ease-out;
+}
+
+.card-bookmark-btn,
+.btn-icon,
+.cat-tab-btn,
+.subcat-pill,
+.place-card {
+  transition-duration: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

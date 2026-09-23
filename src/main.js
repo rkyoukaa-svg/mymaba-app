@@ -15,6 +15,8 @@ import { renderAdminPanelModal, initAdminPanelEvents } from './components/AdminP
 import { renderSellItemModal, initSellItemModalEvents } from './components/SellItemModal.js';
 import { renderWelcomeModal, initWelcomeModalEvents } from './components/WelcomeModal.js';
 import { renderFooter, initFooterEvents } from './components/Footer.js';
+import { createRealtimeClient } from './utils/realtime.js';
+import { createSupabaseRealtimeClient } from './utils/supabaseRealtime.js';
 
 // Application State
 const state = {
@@ -39,6 +41,26 @@ const state = {
 
 // Initialize Document Theme
 document.documentElement.setAttribute('data-theme', getTheme());
+
+// One shared realtime connection for the application.
+const realtimeOptions = {
+  onStatus: (status) => {
+    window.dispatchEvent(new CustomEvent('mymaba:realtime-status', { detail: status }));
+  },
+  onMessage: (message) => {
+    window.dispatchEvent(new CustomEvent('mymaba:realtime-message', { detail: message }));
+  },
+  onError: (error) => {
+    console.warn('Realtime connection error:', error);
+  }
+};
+
+const supabaseRealtime = createSupabaseRealtimeClient(realtimeOptions);
+const realtime = supabaseRealtime.isEnabled()
+  ? supabaseRealtime
+  : createRealtimeClient(realtimeOptions);
+
+window.mymabaRealtime = realtime;
 
 function showToast(message, type = 'success') {
   state.toastMessage = message;
