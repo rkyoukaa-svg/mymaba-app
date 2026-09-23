@@ -2771,6 +2771,79 @@ textarea:focus-visible {
   color: var(--primary-red) !important;
 }
 
+/* Dark theme overrides for the final visual polish layer. */
+[data-theme="dark"] body {
+  background-image: linear-gradient(180deg, rgba(32, 48, 47, 0.72) 0%, transparent 24rem);
+}
+
+[data-theme="dark"] .navbar {
+  border-bottom-color: var(--border-light);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #182323 0%, #20302F 52%, #273938 100%);
+}
+
+[data-theme="dark"] .hero-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-description {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .hero-search-box,
+[data-theme="dark"] .wizard-card {
+  border-color: var(--border-light);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .cat-tab-btn,
+[data-theme="dark"] .subcat-pill,
+[data-theme="dark"] .sort-select {
+  border-color: var(--border-light);
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .place-card {
+  border-color: var(--border-light);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .hero-stats {
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .modal-container,
+[data-theme="dark"] .login-modal-box,
+[data-theme="dark"] .sell-modal-box {
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-container [style*="background: #ffffff"],
+[data-theme="dark"] .modal-container [style*="background:#ffffff"] {
+  background: var(--off-white) !important;
+}
+
+@media (max-width: 640px) {
+  [data-theme="dark"] body {
+    background-image: none;
+  }
+
+  [data-theme="dark"] .nav-actions {
+    background: rgba(32, 48, 47, 0.86);
+    border-color: var(--border-light);
+  }
+
+  [data-theme="dark"] .hero {
+    background: linear-gradient(180deg, #182323 0%, #20302F 100%);
+  }
+}
+
 @keyframes flamePulse {
 
   0%,

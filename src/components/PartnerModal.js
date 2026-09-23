@@ -18,7 +18,7 @@ export function renderPartnerModal() {
             Daftarkan Bisnis / Layanan Anda
           </h2>
           <p style="font-size:0.9rem; opacity:0.9; margin-top:0.4rem;">
-            Jangkau ribuan Mahasiswa Baru (Maba) di berbagai Universitas Surabaya secara gratis & cepat.
+            Jangkau mahasiswa di berbagai universitas seluruh Indonesia secara gratis & cepat.
           </p>
         </div>
 

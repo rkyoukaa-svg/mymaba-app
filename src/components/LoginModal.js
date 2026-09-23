@@ -22,7 +22,7 @@ export function renderLoginModal() {
             Masuk ke Akun Anda
           </h2>
           <p style="font-size: 0.88rem; opacity: 0.9; margin-top: 0.35rem;">
-            Akses rekomendasi kos, kuliner & kebutuhan maba Surabaya secara personalized.
+            Akses rekomendasi kos, kuliner & kebutuhan mahasiswa dari seluruh Indonesia.
           </p>
         </div>
 

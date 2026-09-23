@@ -1,5 +1,5 @@
 import './style.css';
-import { MOCK_PLACES } from './data/mockData.js';
+import { CAMPUSES, MOCK_PLACES } from './data/mockData.js';
 import { getSelectedCampus, getPartnerListings, getMarketplaceItems, toggleBookmark, getTheme, getSystemSettings } from './utils/storage.js';
 
 import { renderNavbar, initNavbarEvents } from './components/Navbar.js';
@@ -184,6 +184,15 @@ function renderApp() {
     ${renderCategoryNav(state.categoryId)}
 
     ${renderFilterBar(state.categoryId, state.subCat, state.sortOrder, state.searchQuery)}
+
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:0.6rem; margin:0.5rem 0 1.25rem; color:var(--text-secondary);">
+        <i data-lucide="map" style="width:17px; height:17px; color:var(--primary-red);"></i>
+        <span style="font-size:0.88rem; font-weight:700;">
+          Menampilkan ${filteredPlaces.length} rekomendasi ${state.campusId === 'all' ? 'di seluruh Indonesia' : `di ${CAMPUSES.find(c => c.id === state.campusId)?.name || 'kampus pilihan'}`}
+        </span>
+      </div>
+    </div>
 
     <!-- Main Listings Section -->
     <main class="container" style="min-height: 400px;">

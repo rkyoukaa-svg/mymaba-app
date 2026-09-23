@@ -2,6 +2,7 @@ import { CAMPUSES } from '../data/mockData.js';
 
 export function renderHero(selectedCampusId) {
   const currentCampusObj = CAMPUSES.find(c => c.id === selectedCampusId) || CAMPUSES[0];
+  const isNationalView = selectedCampusId === 'all';
 
   return `
     <section class="hero">
@@ -9,7 +10,7 @@ export function renderHero(selectedCampusId) {
         <div>
           <div class="hero-tag">
             <i data-lucide="map-pin" style="width:15px; height:15px; color:var(--primary-red);"></i>
-            <span>Platform Informasi Kampus Surabaya</span>
+            <span>${isNationalView ? 'Platform Informasi Kampus Indonesia' : `Platform Informasi ${currentCampusObj.name}`}</span>
           </div>
 
           <h1 class="hero-title">
@@ -17,7 +18,7 @@ export function renderHero(selectedCampusId) {
           </h1>
 
           <p class="hero-description">
-            Direktori terpadu untuk mahasiswa Surabaya. Cari hunian dekat kampus, rekomendasi tempat makan murah, cafe nugas 24 jam, hingga kebutuhan kuliah antar sesama mahasiswa.
+            Direktori terpadu untuk mahasiswa Indonesia. Cari hunian dekat kampus, rekomendasi tempat makan murah, cafe nugas 24 jam, hingga kebutuhan kuliah antar sesama mahasiswa.
           </p>
 
           <!-- Quick Search Bar -->
