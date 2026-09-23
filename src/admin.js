@@ -79,7 +79,7 @@ function renderAdminPortal() {
         <div class="pop-in" style="max-width: 460px; width: 100%; background: rgba(30, 41, 59, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-xl); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); overflow: hidden; backdrop-filter: blur(12px);">
           
           <!-- Security Header -->
-          <div style="background: linear-gradient(135deg, #e11d48 0%, #9f1239 100%); padding: 2rem; text-align: center; color: white; border-bottom: 2px solid var(--gold-accent); position: relative;">
+          <div style="background: var(--red-gradient); padding: 2rem; text-align: center; color: white; border-bottom: 2px solid var(--gold-accent); position: relative;">
             <div class="security-shield-pulse" style="width: 60px; height: 60px; background: rgba(255,255,255,0.18); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.85rem; border: 1.5px solid rgba(255,255,255,0.4);">
               <i data-lucide="shield-lock" style="width: 30px; height: 30px;"></i>
             </div>
@@ -91,7 +91,7 @@ function renderAdminPortal() {
             
             ${user ? `
               <!-- 403 Forbidden Access Warning for Normal Users -->
-              <div style="background: rgba(239, 68, 68, 0.12); border: 1.5px solid #ef4444; color: #f87171; padding: 1rem; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="background: var(--primary-red-soft); border: 1.5px solid var(--primary-red); color: var(--primary-red-dark); padding: 1rem; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.75rem;">
                 <i data-lucide="alert-octagon" style="width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px;"></i>
                 <div>
                   <strong style="display: block; font-size: 0.95rem;">Akses Ditolak (403 Forbidden)</strong>
@@ -140,7 +140,7 @@ function renderAdminPortal() {
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 0.95rem; justify-content: center; background: linear-gradient(135deg, #e11d48 0%, #be123c 100%); border: none;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 0.95rem; justify-content: center; background: var(--red-gradient); border: none;">
                 <i data-lucide="unlock" style="width: 18px; height: 18px;"></i>
                 <span>Verifikasi & Masuk Control Panel</span>
               </button>
@@ -212,7 +212,7 @@ function renderAdminPortal() {
   container.innerHTML = `
     <!-- Toast Notification inside Admin -->
     ${adminState.toastMessage ? `
-      <div style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: ${adminState.toastType === 'error' ? '#ef4444' : (adminState.toastType === 'warning' ? '#f59e0b' : '#10b981')}; color: white; padding: 0.85rem 1.25rem; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; font-weight: 700; animation: fadeInDown 0.3s ease;">
+      <div style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: ${adminState.toastType === 'error' ? 'var(--primary-red)' : (adminState.toastType === 'warning' ? '#f59e0b' : '#10b981')}; color: white; padding: 0.85rem 1.25rem; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; font-weight: 700; animation: fadeInDown 0.3s ease;">
         <i data-lucide="${adminState.toastType === 'error' ? 'alert-circle' : 'check-circle'}" style="width: 20px; height: 20px;"></i>
         <span>${adminState.toastMessage}</span>
       </div>
@@ -242,7 +242,7 @@ function renderAdminPortal() {
             <div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between;">
               <div>
                 <span style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Role Pengguna</span>
-                <div style="font-weight: 800; color: #f43f5e; font-size: 0.88rem;">${adminState.editingUser.role}</div>
+                <div style="font-weight: 800; color: var(--primary-red); font-size: 0.88rem;">${adminState.editingUser.role}</div>
               </div>
               <div style="text-align: right;">
                 <span style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Email Saat Ini</span>
@@ -280,7 +280,7 @@ function renderAdminPortal() {
       <!-- Top Bar Navigation Header -->
       <header style="background: #1e293b; padding: 0.85rem 1.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <div style="width: 44px; height: 44px; background: rgba(225, 29, 72, 0.2); border: 1px solid rgba(225, 29, 72, 0.4); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #f43f5e;">
+          <div style="width: 44px; height: 44px; background: var(--primary-red-soft); border: 1px solid var(--primary-red); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary-red);">
             <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
           </div>
           <div>
@@ -296,7 +296,7 @@ function renderAdminPortal() {
               ` : ''}
             </div>
             <p style="font-size: 0.8rem; color: #94a3b8; margin: 0.1rem 0 0 0;">
-              Terhubung sebagai: <b style="color: #60a5fa;">${user.name}</b> (<span style="color: #f43f5e; font-weight: 700;">${user.role}</span>)
+              Terhubung sebagai: <b style="color: #60a5fa;">${user.name}</b> (<span style="color: var(--primary-red); font-weight: 700;">${user.role}</span>)
             </p>
           </div>
         </div>
@@ -325,7 +325,7 @@ function renderAdminPortal() {
             <span>Buka Web Utama</span>
           </a>
 
-          <button id="admin-logout-btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-size: 0.82rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button id="admin-logout-btn" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red-dark); padding: 0.5rem 1rem; border-radius: var(--radius-md); font-size: 0.82rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="log-out" style="width: 16px; height: 16px;"></i>
             <span>Keluar Admin</span>
           </button>
@@ -402,7 +402,7 @@ function renderAdminPortal() {
               <div class="admin-metric-card" style="background: #1e293b; padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); animation-delay: 0.1s;">
                 <div style="color: #94a3b8; font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Total Listing Konten</div>
                 <div style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-top: 0.4rem;">${allListings.length}</div>
-                <div style="font-size: 0.78rem; color: #f43f5e; margin-top: 0.2rem;">Kos & Marketplace Custom</div>
+                <div style="font-size: 0.78rem; color: var(--primary-red); margin-top: 0.2rem;">Kos & Marketplace Custom</div>
               </div>
 
               <div class="admin-metric-card" style="background: #1e293b; padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); animation-delay: 0.15s;">
@@ -421,7 +421,7 @@ function renderAdminPortal() {
             <!-- Recent System Activity -->
             <div style="background: #1e293b; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem;">
               <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 1rem 0; color: #ffffff; display: flex; align-items: center; gap: 0.5rem;">
-                <i data-lucide="activity" style="width: 18px; height: 18px; color: #f43f5e;"></i>
+                <i data-lucide="activity" style="width: 18px; height: 18px; color: var(--primary-red);"></i>
                 <span>Aktivitas Pengguna Real-Time</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.75rem;">
