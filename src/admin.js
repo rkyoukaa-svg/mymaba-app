@@ -341,13 +341,13 @@ function renderAdminPortal() {
             MENU KONTROL SYSTEM
           </div>
 
-          <button class="nav-item-btn ${adminState.activeTab === 'overview' ? 'active' : ''}" data-tab="overview" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'overview' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'overview' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+          <button class="nav-item-btn ${adminState.activeTab === 'overview' ? 'active' : ''}" data-tab="overview" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'overview' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'overview' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
             <i data-lucide="layout-dashboard" style="width: 18px; height: 18px;"></i>
             <span>Overview & Analytics</span>
           </button>
 
           ${isDevUser ? `
-            <button class="nav-item-btn ${adminState.activeTab === 'users' ? 'active' : ''}" data-tab="users" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'users' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'users' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between;">
+            <button class="nav-item-btn ${adminState.activeTab === 'users' ? 'active' : ''}" data-tab="users" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'users' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'users' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between;">
               <div style="display: flex; align-items: center; gap: 0.65rem;">
                 <i data-lucide="user-check" style="width: 18px; height: 18px;"></i>
                 <span>Kelola Role Users (${usersList.length})</span>
@@ -356,28 +356,28 @@ function renderAdminPortal() {
             </button>
           ` : ''}
 
-          <button class="nav-item-btn ${adminState.activeTab === 'settings' ? 'active' : ''}" data-tab="settings" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'settings' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'settings' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+          <button class="nav-item-btn ${adminState.activeTab === 'settings' ? 'active' : ''}" data-tab="settings" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'settings' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'settings' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
             <i data-lucide="sliders" style="width: 18px; height: 18px;"></i>
             <span>Pengaturan Superadmin</span>
           </button>
 
-          <button class="nav-item-btn ${adminState.activeTab === 'moderation' ? 'active' : ''}" data-tab="moderation" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'moderation' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'moderation' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+          <button class="nav-item-btn ${adminState.activeTab === 'moderation' ? 'active' : ''}" data-tab="moderation" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'moderation' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'moderation' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
             <i data-lucide="file-check-2" style="width: 18px; height: 18px;"></i>
             <span>Moderasi Listing (${allListings.length})</span>
           </button>
 
-          <button class="nav-item-btn ${adminState.activeTab === 'sessions' ? 'active' : ''}" data-tab="sessions" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'sessions' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'sessions' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+          <button class="nav-item-btn ${adminState.activeTab === 'sessions' ? 'active' : ''}" data-tab="sessions" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'sessions' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'sessions' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
             <i data-lucide="users" style="width: 18px; height: 18px;"></i>
             <span>Sesi Pengguna (${activeSessions.length})</span>
           </button>
 
-          <button class="nav-item-btn ${adminState.activeTab === 'logs' ? 'active' : ''}" data-tab="logs" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'logs' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'logs' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+          <button class="nav-item-btn ${adminState.activeTab === 'logs' ? 'active' : ''}" data-tab="logs" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'logs' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'logs' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
             <i data-lucide="list-checks" style="width: 18px; height: 18px;"></i>
             <span>Audit Log (${totalLogs})</span>
           </button>
 
           ${isDevUser ? `
-            <button class="nav-item-btn ${adminState.activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'devtools' ? 'rgba(244, 63, 94, 0.15)' : 'transparent'}; color: ${adminState.activeTab === 'devtools' ? '#f43f5e' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
+            <button class="nav-item-btn ${adminState.activeTab === 'devtools' ? 'active' : ''}" data-tab="devtools" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); border: none; background: ${adminState.activeTab === 'devtools' ? 'var(--primary-red-soft)' : 'transparent'}; color: ${adminState.activeTab === 'devtools' ? 'var(--primary-red)' : '#cbd5e1'}; font-size: 0.88rem; font-weight: 700; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 0.65rem;">
               <i data-lucide="terminal" style="width: 18px; height: 18px;"></i>
               <span>Developer Tools</span>
               <span style="margin-left:auto; background: rgba(59,130,246,0.3); color: #60a5fa; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 4px;">DEV</span>
