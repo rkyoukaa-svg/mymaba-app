@@ -1,4 +1,4 @@
-import { authenticateUser, setAuthUser, getRememberedEmail, MOCK_USERS, logActivity } from '../utils/storage.js';
+import { authenticateUser, setAuthUser, getRememberedEmail, logActivity } from '../utils/storage.js';
 
 export function renderLoginModal() {
   const rememberedEmail = getRememberedEmail();
@@ -96,34 +96,6 @@ export function renderLoginModal() {
             </button>
           </form>
 
-          <!-- Divider -->
-          <div style="display: flex; align-items: center; margin: 1.5rem 0 1.2rem; color: var(--text-muted); font-size: 0.8rem;">
-            <div style="flex: 1; height: 1px; background: var(--border-light);"></div>
-            <span style="padding: 0 0.8rem; font-weight: 600;">AKUN UJI COBA (DEMO ACCOUNTS)</span>
-            <div style="flex: 1; height: 1px; background: var(--border-light);"></div>
-          </div>
-
-          <!-- Quick Fill Demo Credentials -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem;">
-            ${MOCK_USERS.map(u => `
-              <button 
-                type="button" 
-                class="btn-demo-account" 
-                data-demo-email="${u.email}" 
-                data-demo-pass="${u.password}"
-                style="padding: 0.5rem 0.6rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); background: var(--off-white); font-size: 0.78rem; text-align: left; cursor: pointer; transition: var(--transition);"
-              >
-                <div style="font-weight: 700; color: var(--primary-red); display: flex; align-items: center; gap: 4px;">
-                  <span>${u.avatar}</span>
-                  <span>${u.name.split(' ')[0]}</span>
-                </div>
-                <div style="font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                  ${u.email}
-                </div>
-              </button>
-            `).join('')}
-          </div>
-
         </div>
       </div>
     </div>
@@ -174,26 +146,11 @@ export function initLoginModalEvents(onLoginSuccess, onClose) {
     });
   }
 
-  // Demo Accounts Quick Click
-  document.querySelectorAll('.btn-demo-account').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const email = btn.getAttribute('data-demo-email');
-      const pass = btn.getAttribute('data-demo-pass');
-      if (emailInput) emailInput.value = email;
-      if (passwordInput) passwordInput.value = pass;
-      
-      // Clear previous error styles
-      if (feedbackAlert) feedbackAlert.style.display = 'none';
-      if (emailInput) emailInput.style.borderColor = 'var(--border-light)';
-      if (passwordInput) passwordInput.style.borderColor = 'var(--border-light)';
-    });
-  });
-
   // Forgot password helper prompt
   if (forgotLink) {
     forgotLink.addEventListener('click', (e) => {
       e.preventDefault();
-      alert('ℹ️ Petunjuk Lupa Password:\n\nGunakan salah satu akun demo berikut untuk mencoba:\n1. Email: 26410100064@dinamika.ac.id | Password: SSKyoukaa22\n2. Email: maba@mymaba.ac.id | Password: maba123\n3. Email: mahasiswa@its.ac.id | Password: its2026\n4. Email: admin@mymaba.ac.id | Password: admin123');
+      alert('ℹ️ Silakan hubungi pengelola MyMaba untuk proses pemulihan akun.');
     });
   }
 

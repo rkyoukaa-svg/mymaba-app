@@ -104,22 +104,6 @@ function renderAdminPortal() {
               </div>
             `}
 
-            <!-- Quick Demo Credentials Picker for Developer Testing -->
-            <div style="background: rgba(255, 255, 255, 0.04); border: 1px dashed rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1.5rem;">
-              <div style="font-size: 0.76rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.3rem;">
-                <i data-lucide="zap" style="width: 14px; height: 14px; color: #facc15;"></i>
-                <span>Quick Login Preset (Developer & Superadmin)</span>
-              </div>
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button type="button" class="preset-login-btn" data-email="lunar@dev.ac.id" data-pass="DevMaster2026!" style="flex: 1; padding: 0.4rem 0.6rem; background: rgba(59,130,246,0.25); border: 1px solid rgba(59,130,246,0.5); border-radius: 6px; color: #60a5fa; font-size: 0.76rem; font-weight: 800; cursor: pointer;">
-                  🛠️ Developer (lunar@dev.ac.id)
-                </button>
-                <button type="button" class="preset-login-btn" data-email="bintang@superadmin.ac.id" data-pass="SuperAdmin2026!2" style="flex: 1; padding: 0.4rem 0.6rem; background: rgba(225,29,72,0.2); border: 1px solid rgba(225,29,72,0.4); border-radius: 6px; color: #f43f5e; font-size: 0.76rem; font-weight: 700; cursor: pointer;">
-                  👑 Superadmin
-                </button>
-              </div>
-            </div>
-
             <!-- Security Login Form -->
             <form id="admin-security-login-form">
               <div style="margin-bottom: 1.2rem;">
@@ -131,8 +115,8 @@ function renderAdminPortal() {
                   <input 
                     type="email" 
                     id="admin-security-email" 
-                    placeholder="lunar@dev.ac.id" 
-                    value="${user ? '' : 'lunar@dev.ac.id'}"
+                    placeholder="Masukkan email pengelola"
+                    value=""
                     required 
                     style="width: 100%; padding: 0.75rem 0.8rem 0.75rem 2.6rem; background: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); color: white; font-size: 0.9rem;"
                   />
@@ -149,7 +133,7 @@ function renderAdminPortal() {
                     type="password" 
                     id="admin-security-password" 
                     placeholder="••••••••" 
-                    value="${user ? '' : 'DevMaster2026!'}"
+                    value=""
                     required 
                     style="width: 100%; padding: 0.75rem 0.8rem 0.75rem 2.6rem; background: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); color: white; font-size: 0.9rem;"
                   />
@@ -175,16 +159,6 @@ function renderAdminPortal() {
     `;
 
     if (window.lucide) window.lucide.createIcons();
-
-    // Preset login listeners
-    container.querySelectorAll('.preset-login-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const email = btn.getAttribute('data-email');
-        const pass = btn.getAttribute('data-pass');
-        document.getElementById('admin-security-email').value = email;
-        document.getElementById('admin-security-password').value = pass;
-      });
-    });
 
     const form = document.getElementById('admin-security-login-form');
     if (form) {
