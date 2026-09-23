@@ -17,7 +17,7 @@ export function renderHero(selectedCampusId) {
           </h1>
 
           <p class="hero-description">
-            Direktori terpadu untuk mahasiswa Surabaya. Cari hunian dekat kampus, rekomendasi tempat makan murah, cafe nugas 24 jam, hingga jual-beli peralatan kuliah antar sesama mahasiswa.
+            Direktori terpadu untuk mahasiswa Surabaya. Cari hunian dekat kampus, rekomendasi tempat makan murah, cafe nugas 24 jam, hingga kebutuhan kuliah antar sesama mahasiswa.
           </p>
 
           <!-- Quick Search Bar -->
@@ -73,7 +73,7 @@ export function renderHero(selectedCampusId) {
                 <span class="wizard-opt-sub">WiFi kencang & colokan</span>
               </button>
               <button class="wizard-opt-btn" data-wizard-priority="jual-beli">
-                <span class="wizard-opt-title">Marketplace Jual-Beli</span>
+                <span class="wizard-opt-title">Marketplace</span>
                 <span class="wizard-opt-sub">Buku, gadget & peralatan kos</span>
               </button>
             </div>

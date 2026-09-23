@@ -45,7 +45,7 @@ export function renderWelcomeModal() {
 
             <div class="feature-pop-card">
               <div style="color: #10b981;"><i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i></div>
-              <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary);">Marketplace Jual-Beli</div>
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary);">Marketplace</div>
             </div>
           </div>
 

@@ -14,7 +14,7 @@ export const CAMPUSES = [
 
 export const CATEGORIES = [
   { id: 'all', name: 'Semua Kebutuhan', icon: 'grid' },
-  { id: 'jual-beli', name: 'Jual Beli Maba', icon: 'shopping-bag', badge: 'Preloved & Baru' },
+  { id: 'jual-beli', name: 'Marketplace', icon: 'shopping-bag', badge: 'Preloved & Baru' },
   { id: 'hunian', name: 'Hunian & Kos', icon: 'home', badge: 'Terfavorit' },
   { id: 'kuliner', name: 'Kuliner & UMKM', icon: 'utensils', badge: 'Murah Enak' },
   { id: 'nongkrong', name: 'Nongkrong & Nugas', icon: 'coffee', badge: 'WiFi 24h' },

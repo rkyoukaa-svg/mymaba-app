@@ -662,7 +662,7 @@ function renderAdminPortal() {
           ${adminState.activeTab === 'moderation' ? `
             <!-- LISTING MODERATION TAB -->
             <div style="background: #1e293b; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); padding: 1.75rem;">
-              <h3 style="font-size: 1.2rem; font-weight: 800; margin: 0 0 0.4rem 0; color: #ffffff;">Moderasi Listing Kos & Marketplace Jual-Beli</h3>
+              <h3 style="font-size: 1.2rem; font-weight: 800; margin: 0 0 0.4rem 0; color: #ffffff;">Moderasi Listing Kos & Marketplace</h3>
               <p style="font-size: 0.82rem; color: #94a3b8; margin: 0 0 1.25rem 0;">Verifikasi keaslian iklan, tandai sebagai terpercaya, atau hapus konten yang melanggar.</p>
 
               <div style="overflow-x: auto;">

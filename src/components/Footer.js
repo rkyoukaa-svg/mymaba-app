@@ -33,7 +33,7 @@ export function renderFooter() {
               <li><a href="#">Kuliner & Warung Murah</a></li>
               <li><a href="#">Cafe & Tempat Nugas 24h</a></li>
               <li><a href="#">Percetakan & Laundry Kilat</a></li>
-              <li><a href="#">Marketplace Jual-Beli Maba</a></li>
+              <li><a href="#">Marketplace</a></li>
             </ul>
           </div>
 
