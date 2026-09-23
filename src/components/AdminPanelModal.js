@@ -212,7 +212,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                     <h4 style="margin: 0; font-size: 0.92rem; color: #ffffff;">Mode Pemeliharaan Website (Maintenance Mode)</h4>
                     <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Restriksi akses pengguna umum jika sistem dalam perbaikan.</p>
                   </div>
-                  <button id="modal-toggle-maint-btn" style="padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; border: none; cursor: pointer; background: ${settings.maintenanceMode ? '#ef4444' : '#22c55e'}; color: white;">
+                  <button id="modal-toggle-maint-btn" style="padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; border: none; cursor: pointer; background: ${settings.maintenanceMode ? 'var(--primary-red)' : '#22c55e'}; color: white;">
                     ${settings.maintenanceMode ? 'Matikan Maintenance' : 'Nyalakan Maintenance'}
                   </button>
                 </div>
@@ -299,7 +299,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                           `}
                         </td>
                         <td style="padding: 0.7rem 0.85rem;">
-                          <button class="modal-toggle-ban-btn" data-email="${u.email}" style="padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; background: ${u.isBanned ? '#ef4444' : 'rgba(34,197,94,0.2)'}; color: ${u.isBanned ? '#ffffff' : '#4ade80'};">
+                          <button class="modal-toggle-ban-btn" data-email="${u.email}" style="padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; background: ${u.isBanned ? 'var(--primary-red)' : 'rgba(34,197,94,0.2)'}; color: ${u.isBanned ? '#ffffff' : '#4ade80'};">
                             ${u.isBanned ? 'Banned' : 'Active'}
                           </button>
                         </td>
@@ -338,7 +338,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                           </button>
                         </td>
                         <td style="padding: 0.7rem 0.85rem;">
-                          <button class="modal-delete-listing-btn" data-id="${item.id}" style="padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: 1px solid #ef4444; background: rgba(239,68,68,0.15); color: #f87171; cursor: pointer;">
+                          <button class="modal-delete-listing-btn" data-id="${item.id}" style="padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--primary-red); background: var(--primary-red-soft); color: var(--primary-red); cursor: pointer;">
                             🗑️ Hapus
                           </button>
                         </td>
@@ -361,7 +361,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                       <div style="font-size: 1.8rem;">${sess.avatar || '🎓'}</div>
                       <div>
                         <div style="font-weight: 800; color: #ffffff;">${sess.name}</div>
-                        <div style="font-size: 0.78rem; color: #f43f5e;">${sess.email}</div>
+                        <div style="font-size: 0.78rem; color: var(--primary-red);">${sess.email}</div>
                         <div style="font-size: 0.72rem; color: #94a3b8;">${sess.role}</div>
                       </div>
                     </div>
@@ -390,7 +390,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                   </select>
                 </div>
 
-                <button id="admin-clear-logs-btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.55rem 0.85rem; border-radius: var(--radius-md); font-size: 0.78rem; font-weight: 700; cursor: pointer;">
+                <button id="admin-clear-logs-btn" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red); padding: 0.55rem 0.85rem; border-radius: var(--radius-md); font-size: 0.78rem; font-weight: 700; cursor: pointer;">
                   Reset Log
                 </button>
               </div>
@@ -461,7 +461,7 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
                   <button id="modal-export-db-btn" style="background: rgba(59,130,246,0.2); border: 1px solid #3b82f6; color: #60a5fa; padding: 0.55rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 800; cursor: pointer;">
                     📥 Export JSON Dump
                   </button>
-                  <button id="modal-reset-db-btn" style="background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #f87171; padding: 0.55rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 800; cursor: pointer;">
+                  <button id="modal-reset-db-btn" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red); padding: 0.55rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 800; cursor: pointer;">
                     🔥 Factory Reset
                   </button>
                 </div>

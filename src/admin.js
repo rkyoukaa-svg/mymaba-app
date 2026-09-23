@@ -650,7 +650,7 @@ function renderAdminPortal() {
                     <h4 style="margin: 0; font-size: 0.98rem; color: #ffffff;">Izinkan Pendaftaran Akun Mahasiswa Baru</h4>
                     <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Buka atau kunci portal pendaftaran pengguna mahasiswa baru.</p>
                   </div>
-                  <button id="toggle-registration-btn" style="padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.82rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); background: ${settings.allowNewRegistration ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${settings.allowNewRegistration ? '#4ade80' : '#f87171'};">
+                  <button id="toggle-registration-btn" style="padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.82rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); background: ${settings.allowNewRegistration ? 'rgba(34,197,94,0.2)' : 'var(--primary-red-soft)'}; color: ${settings.allowNewRegistration ? '#4ade80' : 'var(--primary-red)'};">
                     ${settings.allowNewRegistration ? '🔓 Pendaftaran Terbuka' : '🔒 Pendaftaran Dikunci'}
                   </button>
                 </div>
@@ -701,7 +701,7 @@ function renderAdminPortal() {
                           </button>
                         </td>
                         <td style="padding: 0.85rem 1rem;">
-                          <button class="delete-listing-btn" data-id="${item.id}" style="padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.76rem; font-weight: 700; cursor: pointer; border: 1px solid #ef4444; background: rgba(239,68,68,0.15); color: #f87171;">
+                          <button class="delete-listing-btn" data-id="${item.id}" style="padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.76rem; font-weight: 700; cursor: pointer; border: 1px solid var(--primary-red); background: var(--primary-red-soft); color: var(--primary-red);">
                             🗑️ Hapus Listing
                           </button>
                         </td>
@@ -743,7 +743,7 @@ function renderAdminPortal() {
             <div style="background: #1e293b; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
                 <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0; color: #ffffff;">Audit Logs System</h3>
-                <button id="admin-dev-clear-logs" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #f87171; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.8rem; cursor: pointer;">
+                <button id="admin-dev-clear-logs" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red); padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.8rem; cursor: pointer;">
                   Reset Log Database
                 </button>
               </div>
@@ -994,9 +994,9 @@ function renderAdminPortal() {
                   </div>
 
                   <!-- Factory Reset -->
-                  <div style="background: #0f172a; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(239,68,68,0.3); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                  <div style="background: #0f172a; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--primary-red); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
                     <div>
-                      <h4 style="margin: 0; font-size: 0.95rem; color: #f87171;">Factory Reset Complete System</h4>
+                      <h4 style="margin: 0; font-size: 0.95rem; color: var(--primary-red);">Factory Reset Complete System</h4>
                       <p style="margin: 0.2rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Hapus seluruh data kustom dan kembalikan sistem ke kondisi awal pabrik.</p>
                     </div>
                     <button id="dev-reset-db-btn" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); color: var(--primary-red-dark); font-size: 0.82rem; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
