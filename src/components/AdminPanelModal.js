@@ -102,34 +102,34 @@ export function renderAdminPanelModal(activeTab = 'overview', searchQuery = '', 
 
         <!-- Navigation Tabs -->
         <div style="background: #1e293b; padding: 0.5rem 1.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 0.5rem; overflow-x: auto;">
-          <button class="admin-tab-btn ${activeTab === 'overview' ? 'active' : ''}" data-tab="overview" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'overview' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'overview' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button class="admin-tab-btn ${activeTab === 'overview' ? 'active' : ''}" data-tab="overview" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'overview' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'overview' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="layout-dashboard" style="width: 16px; height: 16px;"></i>
             <span>Overview & Analytics</span>
           </button>
 
-          <button class="admin-tab-btn ${activeTab === 'settings' ? 'active' : ''}" data-tab="settings" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'settings' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'settings' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button class="admin-tab-btn ${activeTab === 'settings' ? 'active' : ''}" data-tab="settings" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'settings' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'settings' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="sliders" style="width: 16px; height: 16px;"></i>
             <span>Opsi Superadmin</span>
           </button>
 
           ${isDevUser ? `
-            <button class="admin-tab-btn ${activeTab === 'users' ? 'active' : ''}" data-tab="users" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'users' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'users' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+            <button class="admin-tab-btn ${activeTab === 'users' ? 'active' : ''}" data-tab="users" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'users' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'users' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
               <i data-lucide="user-check" style="width: 16px; height: 16px;"></i>
               <span>Kelola Users (${usersList.length})</span>
             </button>
           ` : ''}
 
-          <button class="admin-tab-btn ${activeTab === 'moderation' ? 'active' : ''}" data-tab="moderation" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'moderation' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'moderation' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button class="admin-tab-btn ${activeTab === 'moderation' ? 'active' : ''}" data-tab="moderation" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'moderation' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'moderation' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="file-check-2" style="width: 16px; height: 16px;"></i>
             <span>Moderasi (${allListings.length})</span>
           </button>
           
-          <button class="admin-tab-btn ${activeTab === 'sessions' ? 'active' : ''}" data-tab="sessions" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'sessions' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'sessions' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button class="admin-tab-btn ${activeTab === 'sessions' ? 'active' : ''}" data-tab="sessions" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'sessions' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'sessions' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="users" style="width: 16px; height: 16px;"></i>
             <span>Pengguna Aktif (${totalActiveUsers})</span>
           </button>
 
-          <button class="admin-tab-btn ${activeTab === 'logs' ? 'active' : ''}" data-tab="logs" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'logs' ? '#f43f5e' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'logs' ? '#f43f5e' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <button class="admin-tab-btn ${activeTab === 'logs' ? 'active' : ''}" data-tab="logs" style="padding: 0.75rem 1.2rem; font-size: 0.85rem; font-weight: 700; border: none; background: none; color: ${activeTab === 'logs' ? 'var(--primary-red)' : '#94a3b8'}; border-bottom: 3px solid ${activeTab === 'logs' ? 'var(--primary-red)' : 'transparent'}; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
             <i data-lucide="list-checks" style="width: 16px; height: 16px;"></i>
             <span>Audit Log (${totalLogs})</span>
           </button>
