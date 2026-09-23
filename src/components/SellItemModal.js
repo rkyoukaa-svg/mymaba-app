@@ -173,21 +173,21 @@ export function renderSellItemModal() {
             </div>
 
             <!-- 18+ Safety Warning Box -->
-            <div class="warning-notice-box" style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.9rem 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; color: #b91c1c; font-weight: 800; font-size: 0.85rem; margin-bottom: 0.35rem;">
+            <div class="warning-notice-box" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); padding: 0.9rem 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-red-dark); font-weight: 800; font-size: 0.85rem; margin-bottom: 0.35rem;">
                 <i data-lucide="shield-alert" style="width: 18px; height: 18px; color: var(--primary-red); flex-shrink: 0;"></i>
                 <span>ATURAN KESELAMATAN & DILARANG MENJUAL BARANG 18+</span>
               </div>
-              <p style="font-size: 0.78rem; color: #991b1b; line-height: 1.45; margin: 0 0 0.5rem 0;">
+              <p style="font-size: 0.78rem; color: var(--primary-red-dark); line-height: 1.45; margin: 0 0 0.5rem 0;">
                 <b>DILARANG KERAS</b> menjual barang 18+ dan barang berbahaya seperti:
               </p>
-              <ul style="font-size: 0.76rem; color: #991b1b; padding-left: 1.2rem; margin: 0 0 0.6rem 0; line-height: 1.4;">
+              <ul style="font-size: 0.76rem; color: var(--primary-red-dark); padding-left: 1.2rem; margin: 0 0 0.6rem 0; line-height: 1.4;">
                 <li>🚫 <b>Minuman Keras / Alkohol</b></li>
                 <li>🚫 <b>Rokok / Vape / Liquid / Pods</b></li>
                 <li>🚫 <b>Senjata Tajam / Senjata Api / Bahan Berbahaya</b></li>
               </ul>
               
-              <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.78rem; color: #7f1d1d; font-weight: 700; cursor: pointer; user-select: none;">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.78rem; color: var(--primary-red-dark); font-weight: 700; cursor: pointer; user-select: none;">
                 <input type="checkbox" id="sell-compliance-checkbox" required style="accent-color: var(--primary-red); margin-top: 2px; cursor: pointer;" />
                 <span>Saya berjanji barang yang saya jual TIDAK BERBAU 18+ (Tanpa Alkohol, Vape/Rokok & Senjata Tajam) serta legal.</span>
               </label>

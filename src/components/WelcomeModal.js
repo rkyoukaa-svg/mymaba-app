@@ -50,12 +50,12 @@ export function renderWelcomeModal() {
           </div>
 
           <!-- 18+ Warning Notice Card -->
-          <div class="popup-anim-3 warning-notice-box" style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 0.9rem 1rem; margin-bottom: 1.25rem; text-align: left;">
-            <div style="display: flex; align-items: center; gap: 0.5rem; color: #b91c1c; font-weight: 800; font-size: 0.85rem; margin-bottom: 0.35rem;">
+          <div class="popup-anim-3 warning-notice-box" style="background: var(--primary-red-soft); border: 1px solid var(--primary-red); border-radius: var(--radius-md); padding: 0.9rem 1rem; margin-bottom: 1.25rem; text-align: left;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-red-dark); font-weight: 800; font-size: 0.85rem; margin-bottom: 0.35rem;">
               <i data-lucide="shield-alert" style="width: 18px; height: 18px; color: var(--primary-red); flex-shrink: 0;"></i>
               <span>ATURAN KESELAMATAN & LARANGAN BARANG 18+</span>
             </div>
-            <p style="font-size: 0.8rem; color: #991b1b; line-height: 1.5; margin: 0;">
+            <p style="font-size: 0.8rem; color: var(--primary-red-dark); line-height: 1.5; margin: 0;">
               <b>DILARANG KERAS</b> menjual barang yang berbau 18+ seperti <b>Minuman Keras (Alkohol)</b>, <b>Rokok / Vape / Liquid</b>, dan <b>Senjata Tajam</b> di platform MyMaba. Pelanggaran akan berakibat pemblokiran akun permanen.
             </p>
           </div>

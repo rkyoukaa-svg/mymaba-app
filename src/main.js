@@ -142,7 +142,7 @@ function renderApp() {
       <div style="background: var(--red-gradient); color: white; padding: 0.85rem 1.25rem; text-align: center; font-size: 0.92rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 0.75rem; border-bottom: 2px solid #fde047; box-shadow: 0 4px 15px var(--primary-red-glow); animation: pulse 2s infinite;">
         <i data-lucide="siren" style="width: 22px; height: 22px; color: #fde047; flex-shrink: 0;"></i>
         <div>
-          <span style="background: #fde047; color: #7f1d1d; font-size: 0.7rem; font-weight: 900; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.5rem; text-transform: uppercase;">SIARAN DARURAT DEVELOPER</span>
+          <span style="background: #fde047; color: var(--primary-red-dark); font-size: 0.7rem; font-weight: 900; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.5rem; text-transform: uppercase;">SIARAN DARURAT DEVELOPER</span>
           <strong style="color: #ffffff;">${sysSettings.emergencyAlert.title || 'PEMBERITAHUAN DARURAT SISTEM'}:</strong>
           <span>${sysSettings.emergencyAlert.message || 'Pemeliharaan mendesak sedang berlangsung.'}</span>
         </div>
